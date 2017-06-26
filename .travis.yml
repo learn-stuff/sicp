@@ -1,3 +1,5 @@
+language: racket
+
 env:
  - RACKET_VERSION=6.9
 
