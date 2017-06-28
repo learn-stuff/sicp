@@ -26,5 +26,4 @@
   (require rackunit)
 
   (check-= 2 (cubert 8) 0.001)
-
   (check-= 3 (cubert 27) 0.001))
