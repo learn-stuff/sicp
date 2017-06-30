@@ -5,6 +5,7 @@
 (define (p x) (- (* 3 x) (* 4 (cube x))))
 
 ;; (/ (/ (/ (/ (/ 12.15 3) 3) 3) 3) 3) ;; 0.0499999
+;; log3 a
 
 (define (sine angle)
   (if (not (> (abs angle) 0.1))
