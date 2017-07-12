@@ -50,7 +50,7 @@
   (expt n 5))
 
 
-(define upper-bound 400)
+(define upper-bound 100)
 (define test-range (range 1 upper-bound))
 (define xs test-range)
 (define ys (map run-only-counter test-range))
@@ -62,6 +62,6 @@
   (function approximation 0 upper-bound))
 
 (plot
- (mix
+ (list
   (points (map vector xs ys))
   (function approximation)))
