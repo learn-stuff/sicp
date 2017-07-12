@@ -1,7 +1,5 @@
 #lang racket
 
-(define count 0)
-
 (define (range n m)
   (cond
     ((= n m) (list n))
@@ -27,6 +25,18 @@
         ((= kinds-of-coins 4) 25)
         ((= kinds-of-coins 5) 50)))
 
+;; Experiments
+
+;; (run-with-counter 11)    ; '(4 . 55)
+;; (run-with-counter 10)    ; '(4 . 41)
+;; (run-with-counter 100)   ; '(292 . 15499)
+;; (run-with-counter 200)   ; '(2435 . 229589)
+;; (run-with-counter 1000)  ; '(801451 . 333082021)
+
+(require plot)
+
+(define count 0)
+
 (define (run-with-counter amount)
   (set! count 0)
   (cons (count-change amount) count))
@@ -39,14 +49,6 @@
 (define (approximation n)
   (expt n 5))
 
-
-;; (run-with-counter 11)    ; '(4 . 55)
-;; (run-with-counter 10)    ; '(4 . 41)
-;; (run-with-counter 100)   ; '(292 . 15499)
-;; (run-with-counter 200)   ; '(2435 . 229589)
-;; (run-with-counter 1000)  ; '(801451 . 333082021)
-
-(require plot)
 
 (define upper-bound 400)
 (define test-range (range 1 upper-bound))
