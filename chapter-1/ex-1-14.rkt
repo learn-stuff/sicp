@@ -1,5 +1,7 @@
 #lang racket
 
+(define count 0)
+
 (define (range n m)
   (cond
     ((= n m) (list n))
@@ -34,8 +36,6 @@
 ;; (run-with-counter 1000)  ; '(801451 . 333082021)
 
 (require plot)
-
-(define count 0)
 
 (define (run-with-counter amount)
   (set! count 0)
