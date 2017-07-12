@@ -46,11 +46,11 @@
   (count-change amount)
   count)
 
-(define (approximation n)
-  (expt n 5))
+(define approximation
+  (λ (n) (expt n 5)))
 
 
-(define upper-bound 100)
+(define upper-bound 400)
 (define test-range (range 1 upper-bound))
 (define xs test-range)
 (define ys (map run-only-counter test-range))
