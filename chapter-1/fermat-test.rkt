@@ -3,6 +3,7 @@
 (require "square.rkt")
 
 (provide fast-prime?)
+(provide expmod)
 
 (define (expmod base exp m)
   (cond ((= exp 0) 1)
