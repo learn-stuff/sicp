@@ -51,7 +51,7 @@
 ;; (define (log2 n) (/ (log n) (log 2)))
 ;; (for-each timed-prime-test primes-list)
 ;; (map log2 primes-list)
-;; 
+
 
 ;; n              fast-prime        log2                 slow-prime
 ;; 1009           0.220947265625    9.978710459106358    0.172119140625
