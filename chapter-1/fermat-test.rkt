@@ -2,6 +2,8 @@
 
 (require "square.rkt")
 
+(provide fast-prime?)
+
 (define (expmod base exp m)
   (cond ((= exp 0) 1)
         ((even? exp)
@@ -22,3 +24,17 @@
          (fast-prime? n (- times 1)))
         (else false)))
 
+(module+ test
+  (require rackunit)
+
+  (define (prime? n)
+    (fast-prime? n 5))
+
+  (test-case
+   "prime? checks for prime numbers"
+   (check-true (prime? 2))
+   (check-true (prime? 3))
+   (check-true (prime? 5))
+   (check-true (prime? 1009))
+   (check-false (prime? 4))
+   (check-false (prime? 105))))
